@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marina Bay Sands | Luxury Stay Above the City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="latihan1.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        MARINA BAY SANDS
+        <span>SKY RESORT & RESIDENCES</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Stay</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="#suites">Suites</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiences">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dining">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / BOOKING -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Left -->
+        <div class="col-lg-6">
+          <div class="hero-eyebrow">Singapore • Marina Bay Waterfront</div>
+          <h1 class="hero-title">Awaken Above the Skyline.</h1>
+          <div class="hero-subtitle">A five-star sanctuary in the clouds</div>
+          <p class="hero-text">
+            Marina Bay Sands invites you to a world where infinity pools meet
+            starlit cityscapes. From award-winning suites to bespoke concierge
+            services, every detail is curated for the modern luxury traveller.
+          </p>
+          <div class="hero-chips mb-3">
+            <div class="chip"><span class="chip-dot"></span>SkyPark Infinity Pool</div>
+            <div class="chip"><span class="chip-dot"></span>Butler-serviced Suites</div>
+            <div class="chip"><span class="chip-dot"></span>Fine Dining & Michelin-starred</div>
+            <div class="chip"><span class="chip-dot"></span>Private Lounge Access</div>
+          </div>
+        </div>
+
+        <!-- Right: Booking card -->
+        <div class="col-lg-5 ms-lg-auto">
+          <div class="booking-card">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <div class="booking-heading">Book your marina bay sands stay</div>
+                <div class="booking-subheading mt-1">
+                  Real-time availability for five-star rooms & suites at Marina Bay Sands.
+                </div>
+              </div>
+              <div class="badge-collection">
+                CURATED BY <strong class="ms-1">LUXE TRAVEL</strong>
+              </div>
+            </div>
+
+            <form id="bookingForm" class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Destination</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  value="Marina Bay Sands, Singapore"
+                  readonly
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Check-in</label>
+                <input type="date" class="form-control" id="checkin" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Check-out</label>
+                <input type="date" class="form-control" id="checkout" required />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Room Type (5★)</label>
+                <select class="form-select" id="roomType" required>
+                  <option value="" selected disabled>Select room category</option>
+                  <option>Deluxe Room City View</option>
+                  <option>Deluxe Room Harbour View</option>
+                  <option>Premier Room Sky View</option>
+                  <option>Club Room Marina Bay</option>
+                  <option>Family Room City Panorama</option>
+                  <option>Orchid Suite</option>
+                  <option>Horizon Suite</option>
+                  <option>Sands Suite</option>
+                  <option>Presidential Suite</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Guests</label>
+                <select class="form-select" id="guests" required>
+                  <option value="" selected disabled>Select guests</option>
+                  <option value="1">1 Adult</option>
+                  <option value="2">2 Adults</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-luxe mt-1">
+                  Check Availability &nbsp;➝
+                </button>
+                <p class="small-note text-end mt-2 mb-0">
+                  Instant request • <strong>Best Rate Guaranteed</strong> on direct bookings.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ROOMS & RATES WITH FILTERS -->
+  <section id="rooms" class="rooms-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Filters -->
+        <div class="col-lg-4">
+          <div class="filters-card">
+            <div class="filters-title">Filters</div>
+
+            <!-- Display -->
+            <div class="mb-3">
+              <div class="filters-group-label">Display</div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="displayMode" id="viewRooms" value="rooms" checked>
+                <label class="form-check-label" for="viewRooms">View by rooms</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="displayMode" id="viewRates" value="rates">
+                <label class="form-check-label" for="viewRates">View by rates</label>
+              </div>
+            </div>
+
+            <!-- Sort by -->
+            <div class="mb-3">
+              <div class="filters-group-label">Sort by</div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortPrice" id="sortDefault" value="default" checked>
+                <label class="form-check-label" for="sortDefault">Price</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortPrice" id="sortLowest" value="lowest">
+                <label class="form-check-label" for="sortLowest">Lowest price</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortPrice" id="sortHighest" value="highest">
+                <label class="form-check-label" for="sortHighest">Highest price</label>
+              </div>
+            </div>
+
+            <hr class="filters-divider" />
+
+            <!-- Bed + Rate type -->
+            <div class="filters-subgrid mb-2">
+              <div>
+                <div class="filters-column-title">Bed type</div>
+                <div class="form-check">
+                  <input class="form-check-input filter-bed" type="checkbox" id="bedKing" value="king">
+                  <label class="form-check-label" for="bedKing">King</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-bed" type="checkbox" id="bedQueen" value="queen">
+                  <label class="form-check-label" for="bedQueen">Queen</label>
+                </div>
+                <div class="filters-clear text-muted mt-1" data-clear="bed">Clear</div>
+              </div>
+
+              <div>
+                <div class="filters-column-title">Rate type</div>
+                <div class="form-check">
+                  <input class="form-check-input filter-rate" type="checkbox" id="rateDirect" value="direct">
+                  <label class="form-check-label" for="rateDirect">Book Direct Exclusive</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-rate" type="checkbox" id="rateFlexible" value="flexible">
+                  <label class="form-check-label" for="rateFlexible">Flexible Rate</label>
+                </div>
+                <div class="filters-clear text-muted mt-1" data-clear="rate">Clear</div>
+              </div>
+            </div>
+
+            <hr class="filters-divider" />
+
+            <!-- Room category + room type -->
+            <div class="filters-subgrid mb-2">
+              <div>
+                <div class="filters-column-title">Room category</div>
+                <div class="form-check">
+                  <input class="form-check-input filter-category" type="checkbox" id="catFamilySuite" value="collection-family">
+                  <label class="form-check-label" for="catFamilySuite">Sands Collection - Sands Family Suite</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-category" type="checkbox" id="catSuites" value="collection-suites">
+                  <label class="form-check-label" for="catSuites">Sands Collection - Suites</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-category" type="checkbox" id="catRooms" value="collection-rooms">
+                  <label class="form-check-label" for="catRooms">Sands Collection - Rooms</label>
+                </div>
+                <div class="filters-clear text-muted mt-1" data-clear="category">Clear</div>
+              </div>
+
+              <div>
+                <div class="filters-column-title">Room type</div>
+                <div class="form-check">
+                  <input class="form-check-input filter-type" type="checkbox" id="typeBaySuite" value="bay-suite">
+                  <label class="form-check-label" for="typeBaySuite">Sands Bay Suite King – City View</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-type" type="checkbox" id="typeFamily2" value="family-2br">
+                  <label class="form-check-label" for="typeFamily2">Sands Family Suite (2-Bedroom)</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-type" type="checkbox" id="typeFamily" value="family">
+                  <label class="form-check-label" for="typeFamily">Sands Family Suite</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-type" type="checkbox" id="typePremierSuite" value="premier-suite">
+                  <label class="form-check-label" for="typePremierSuite">Sands Premier Suite King – City View</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-type" type="checkbox" id="typeStudio" value="studio">
+                  <label class="form-check-label" for="typeStudio">Sands Premier Studio King – Gardens by the Bay View</label>
+                </div>
+                <div class="filters-clear text-muted mt-1" data-clear="type">Clear</div>
+              </div>
+            </div>
+
+            <hr class="filters-divider" />
+
+            <!-- Price slider -->
+            <div class="mb-1">
+              <div class="filters-group-label mb-1">Price (avg. / night)</div>
+              <input type="range" class="form-range" id="priceRange" min="600" max="2600" step="50" value="2600">
+              <div class="d-flex justify-content-between price-labels">
+                <span id="priceMinLabel">From SGD 600</span>
+                <span id="priceMaxLabel">Up to SGD 2,600</span>
+              </div>
+            </div>
+            <p class="filters-note mt-1 mb-0">
+              Prices shown are sample nightly rates and may vary by date and availability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Room list -->
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-between align-items-baseline mb-3">
+            <div>
+              <div class="section-label">Rooms & rates</div>
+              <h2 class="section-title mb-1">Choose your Marina Bay Sands stay.</h2>
+            </div>
+            <p class="small text-muted-soft mb-0" id="roomsCount">8 rooms available</p>
+          </div>
+
+          <div id="roomList" class="room-list">
+            <!-- 1. Sands Bay Suite King – City View -->
+            <div class="room-card bed-king rate-direct rate-flexible collection-suites bay-suite"
+                 data-price="1450">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Suites</span>
+                  <div class="room-card-title">Sands Bay Suite King – City View</div>
+                  <div class="room-card-meta small">
+                    King bed • Up to 3 guests • High-floor city skyline
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Generous living area, walk-in wardrobe and floor-to-ceiling views of the Singapore skyline.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 1,450 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 2. Sands Family Suite (2-Bedroom) -->
+            <div class="room-card bed-king rate-flexible collection-family family-2br"
+                 data-price="1900">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Sands Family Suite</span>
+                  <div class="room-card-title">Sands Family Suite (2-Bedroom)</div>
+                  <div class="room-card-meta small">
+                    2 bedrooms • King & twin beds • Up to 5 guests
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Perfect for families seeking space and privacy with separate living room and dining corner.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 1,900 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 3. Sands Family Suite -->
+            <div class="room-card bed-king rate-direct rate-flexible collection-family family"
+                 data-price="1650">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Sands Family Suite</span>
+                  <div class="room-card-title">Sands Family Suite</div>
+                  <div class="room-card-meta small">
+                    King bed • Sofa bed • Up to 4 guests
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Spacious open-plan suite with cosy lounge area and child-friendly amenities on request.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 1,650 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 4. Sands Premier Suite King – City View -->
+            <div class="room-card bed-king rate-direct collection-suites premier-suite"
+                 data-price="1550">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Suites</span>
+                  <div class="room-card-title">Sands Premier Suite King – City View</div>
+                  <div class="room-card-meta small">
+                    King bed • Separate living room • Club lounge access
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Elegant corner suite with panoramic city views and complimentary evening cocktails.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 1,550 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 5. Sands Premier Studio King – Gardens by the Bay View -->
+            <div class="room-card bed-king rate-flexible collection-suites studio"
+                 data-price="1350">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Suites</span>
+                  <div class="room-card-title">Sands Premier Studio King – Gardens by the Bay View</div>
+                  <div class="room-card-meta small">
+                    King bed • Up to 2 guests • Gardens by the Bay view
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Studio-style layout with freestanding bathtub and sweeping views over Gardens by the Bay.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 1,350 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 6. Deluxe Room City View -->
+            <div class="room-card bed-queen rate-flexible collection-rooms"
+                 data-price="650">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Rooms</span>
+                  <div class="room-card-title">Deluxe Room City View</div>
+                  <div class="room-card-meta small">
+                    Queen bed • Up to 2 guests • City view
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Thoughtfully appointed guest room with warm tones and a curated minibar.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 650 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 7. Deluxe Room Harbour View -->
+            <div class="room-card bed-queen rate-flexible collection-rooms"
+                 data-price="720">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Rooms</span>
+                  <div class="room-card-title">Deluxe Room Harbour View</div>
+                  <div class="room-card-meta small">
+                    Queen bed • Up to 2 guests • Harbour-facing
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Enjoy tranquil views over the harbour with access to all core Marina Bay Sands facilities.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 720 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+            <!-- 8. Premier Room Sky View -->
+            <div class="room-card bed-king rate-direct collection-rooms"
+                 data-price="820">
+              <div class="room-card-header mb-1">
+                <div>
+                  <span class="room-tag me-2">Sands Collection - Rooms</span>
+                  <div class="room-card-title">Premier Room Sky View</div>
+                  <div class="room-card-meta small">
+                    King bed • Up to 2 guests • Higher floor sky view
+                  </div>
+                </div>
+              </div>
+              <p class="room-card-desc small mb-3">
+                Higher-floor room with expansive windows and access to the iconic SkyPark infinity pool.
+              </p>
+              <div class="d-flex justify-content-between align-items-end">
+                <div>
+                  <div class="room-price-label text-muted-soft">From</div>
+                  <div class="room-price fw-semibold">
+                    SGD 820 <span class="small text-muted-soft">/ night</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline-light-luxe">View details</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUITES SECTION -->
+  <section id="suites">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-lg-7">
+          <div class="section-label">Elevated stays</div>
+          <h2 class="section-title">Suites sculpted for sky-high living.</h2>
+          <p class="text-muted-soft">
+            From sunrise over the harbour to glittering night views of the city,
+            our suites are designed for guests who expect more than just a room.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-luxe h-100">
+            <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg" class="w-100" alt="Premier Room">
+            <div class="card-luxe-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-room">Skyline</span>
+                <span class="small text-muted-soft">Up to 2 guests</span>
+              </div>
+              <h5 class="room-title mb-1">Premier Room Sky View</h5>
+              <p class="small text-muted-soft mb-2">
+                Floor-to-ceiling windows, marble bathroom and exclusive access to the
+                SkyPark infinity pool.
+              </p>
+              <div class="d-flex justify-content-between small text-muted-soft">
+                <span>Starting from</span>
+                <span class="text-light">SGD 780 / night</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-luxe h-100">
+            <img src="https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg" class="w-100" alt="Horizon Suite">
+            <div class="card-luxe-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-room">Club Access</span>
+                <span class="small text-muted-soft">Up to 3 guests</span>
+              </div>
+              <h5 class="room-title mb-1">Horizon Suite</h5>
+              <p class="small text-muted-soft mb-2">
+                Separate living area, complimentary champagne breakfast and evening
+                cocktails at the club lounge.
+              </p>
+              <div class="d-flex justify-content-between small text-muted-soft">
+                <span>Starting from</span>
+                <span class="text-light">SGD 1,480 / night</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-luxe h-100">
+            <img src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg" class="w-100" alt="Presidential Suite">
+            <div class="card-luxe-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge-room">Signature</span>
+                <span class="small text-muted-soft">Up to 4 guests</span>
+              </div>
+              <h5 class="room-title mb-1">Presidential Suite</h5>
+              <p class="small text-muted-soft mb-2">
+                Private spa room, in-suite bar, personal butler and panoramic 270° views
+                of the Marina Bay waterfront.
+              </p>
+              <div class="d-flex justify-content-between small text-muted-soft">
+                <span>Starting from</span>
+                <span class="text-light">On request only</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES SECTION -->
+  <section id="experiences">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-lg-7">
+          <div class="section-label">Signature experiences</div>
+          <h2 class="section-title">Beyond a stay, a curated journey.</h2>
+          <p class="text-muted-soft">
+            Discover experiences designed exclusively for Marina Bay Sands guests:
+            from private yacht charters to in-suite spa rituals.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <span class="icon-circle">∞</span>
+            <div>
+              <h6 class="mb-1">SkyPark Sunset Ritual</h6>
+              <p class="small text-muted-soft mb-0">
+                Reserved cabana, handcrafted cocktails and a dedicated photographer to
+                capture golden-hour moments by the infinity pool.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <span class="icon-circle">✦</span>
+            <div>
+              <h6 class="mb-1">Bespoke City Discoveries</h6>
+              <p class="small text-muted-soft mb-0">
+                Private chauffeur and curated itineraries featuring art galleries,
+                heritage districts and hidden speakeasies across Singapore.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <span class="icon-circle">♡</span>
+            <div>
+              <h6 class="mb-1">In-Suite Spa & Wellness</h6>
+              <p class="small text-muted-soft mb-0">
+                Tailor-made wellness programmes including couple massages, aromatherapy
+                baths and sunrise yoga on your private balcony.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <p class="small text-muted-soft mb-2 text-uppercase" style="letter-spacing:0.16em;">For discerning travellers</p>
+          <h4 class="mb-2">Dedicated concierge, from touchdown to take-off.</h4>
+          <p class="text-muted-soft mb-0">
+            Your personal concierge orchestrates every detail of your journey —
+            airport transfers, restaurant reservations, theatre tickets and
+            last-minute experiences — so you can simply arrive and exhale.
+          </p>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <a href="#hero" class="btn btn-outline-light-luxe">
+            Plan my stay
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DINING SECTION -->
+  <section id="dining">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-lg-7">
+          <div class="section-label">Culinary artistry</div>
+          <h2 class="section-title">A constellation of flavours above the bay.</h2>
+          <p class="text-muted-soft">
+            From sunrise breakfasts overlooking the harbour to late-night tasting menus,
+            Marina Bay Sands is a destination for gastronomes.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-luxe">
+            <div class="card-luxe-body">
+              <p class="badge-room mb-2">Rooftop</p>
+              <h5 class="room-title mb-1">Aurora Sky Grill</h5>
+              <p class="small text-muted-soft mb-2">
+                Wood-fired seafood, champagne pairings and open-air terraces with
+                uninterrupted city views.
+              </p>
+              <p class="small text-muted-soft mb-0">Recommended for: sunset dinners & celebrations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-luxe">
+            <div class="card-luxe-body">
+              <p class="badge-room mb-2">Michelin-Inspired</p>
+              <h5 class="room-title mb-1">Tsubaki Omakase</h5>
+              <p class="small text-muted-soft mb-2">
+                Intimate 12-seat counter serving seasonal Japanese omakase menus,
+                crafted by our master chef.
+              </p>
+              <p class="small text-muted-soft mb-0">Recommended for: chef’s table experiences.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-luxe">
+            <div class="card-luxe-body">
+              <p class="badge-room mb-2">Lobby Lounge</p>
+              <h5 class="room-title mb-1">The Sands Salon</h5>
+              <p class="small text-muted-soft mb-2">
+                Afternoon high tea, live piano and an extensive list of rare whiskies
+                and vintage champagnes.
+              </p>
+              <p class="small text-muted-soft mb-0">Recommended for: elegant gatherings & meetings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY / TESTIMONIALS -->
+  <section id="gallery">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-lg-7">
+          <div class="section-label">Gallery & stories</div>
+          <h2 class="section-title">Moments captured at Marina Bay Sands.</h2>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <div class="col-md-8">
+          <div class="card-luxe">
+            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg" class="w-100" style="height:260px;object-fit:cover;" alt="Infinity Pool">
+          </div>
+        </div>
+        <div class="col-md-4 d-flex flex-column gap-3">
+          <div class="card-luxe flex-fill">
+            <img src="https://images.pexels.com/photos/2581541/pexels-photo-2581541.jpeg" class="w-100" style="height:122px;object-fit:cover;" alt="Lobby">
+          </div>
+          <div class="card-luxe flex-fill">
+            <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg" class="w-100" style="height:122px;object-fit:cover;" alt="Night view">
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <p class="small text-muted-soft text-uppercase mb-1" style="letter-spacing:0.18em;">Guest stories</p>
+          <h5 class="mb-2">“Like living in a movie scene above Singapore.”</h5>
+          <p class="small text-muted-soft mb-0">
+            “From the moment we checked in, everything felt cinematic — the view,
+            the service, the little touches in our suite.”
+          </p>
+          <p class="small text-muted-soft mb-0 mt-2">— Olivia & Nathan, honeymoon couple</p>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-2">Flawless for business & events.</h6>
+          <p class="small text-muted-soft mb-1">
+            “Our leadership retreat ran seamlessly — private meeting rooms, dedicated AV
+            team and curated dining. Every request was handled before we even asked.”
+          </p>
+          <p class="small text-muted-soft mb-0">— Daniel, corporate guest</p>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-2">Your skyline story starts here.</h6>
+          <p class="small text-muted-soft mb-2">
+            Whether you’re celebrating a milestone, hosting a business summit or simply
+            escaping for a weekend, Marina Bay Sands becomes part of your story.
+          </p>
+          <a href="#hero" class="btn btn-outline-light-luxe">Check dates & offers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <section id="contact">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <div class="section-label">Contact & concierge</div>
+          <h2 class="section-title">Speak with our reservations specialists.</h2>
+          <p class="text-muted-soft mb-3">
+            Share your travel dates and preferences, and our team will craft a stay
+            tailored to you — from room selection to restaurant reservations.
+          </p>
+          <div class="row small text-muted-soft">
+            <div class="col-md-6 mb-2">
+              <strong class="d-block text-light mb-1">Reservations</strong>
+              Phone: +65 6688 8888<br />
+              Email: reservations@marinabaysands.com
+            </div>
+            <div class="col-md-6 mb-2">
+              <strong class="d-block text-light mb-1">Location</strong>
+              10 Bayfront Avenue, Marina Bay<br />
+              Singapore 018956
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-lg-end">
+          <p class="small text-muted-soft mb-2">Prefer a personal touch?</p>
+          <a href="#hero" class="btn btn-luxe" style="width:auto;">
+            Request a curated stay
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© <span id="year"></span> Marina Bay Sands. All rights reserved.</span>
+      <span class="text-uppercase" style="letter-spacing:0.18em;font-size:0.7rem;">
+        Designed for the modern luxury traveller.
+      </span>
+    </div>
+  </footer>
+
+  <!-- MODAL (BOOKING SUMMARY) -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between">
+          <div>
+            <h5 class="modal-title">Your Marina Bay Sands request</h5>
+            <p class="small text-muted-soft mb-0">
+              Thank you. Your request has been received. Our reservations team will
+              confirm availability shortly.
+            </p>
+          </div>
+          <span class="modal-badge ms-3">Pre-confirmation</span>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush list-group-luxe mb-2">
+            <li class="list-group-item">
+              <span class="list-label">Hotel</span>
+              <span class="list-value">Marina Bay Sands, Singapore</span>
+            </li>
+            <li class="list-group-item">
+              <span class="list-label">Dates</span>
+              <span class="list-value" id="modalDates"></span>
+            </li>
+            <li class="list-group-item">
+              <span class="list-label">Guests</span>
+              <span class="list-value" id="modalGuests"></span>
+            </li>
+            <li class="list-group-item">
+              <span class="list-label">Room Type</span>
+              <span class="list-value" id="modalRoom"></span>
+            </li>
+          </ul>
+          <p class="small text-muted-soft mb-0">
+            A dedicated concierge will soon contact you to finalise your booking,
+            discuss special requests and share the best available rate for your dates.
+          </p>
+        </div>
+        <div class="modal-footer d-flex justify-content-between align-items-center">
+          <span class="small text-muted-soft text-uppercase" style="letter-spacing:0.18em;">
+            Step 1 of 2 • Awaiting confirmation
+          </span>
+          <button type="button" class="btn btn-outline-light-luxe" data-bs-dismiss="modal">
+            Back to website
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Date inputs (min = today & check-out >= check-in)
+    const checkinInput = document.getElementById("checkin");
+    const checkoutInput = document.getElementById("checkout");
+
+    const today = new Date();
+    const isoToday = today.toISOString().split("T")[0];
+    checkinInput.min = isoToday;
+    checkoutInput.min = isoToday;
+
+    checkinInput.addEventListener("change", () => {
+      if (checkinInput.value) {
+        checkoutInput.min = checkinInput.value;
+        if (checkoutInput.value && checkoutInput.value < checkinInput.value) {
+          checkoutInput.value = checkinInput.value;
+        }
+      }
+    });
+
+    function formatDate(dateStr) {
+      if (!dateStr) return "";
+      const date = new Date(dateStr + "T00:00:00");
+      const options = { day: "2-digit", month: "short", year: "numeric" };
+      return date.toLocaleDateString("en-GB", options);
+    }
+
+    // Handle form submit & show modal
+    const bookingForm = document.getElementById("bookingForm");
+    const modalDates = document.getElementById("modalDates");
+    const modalGuests = document.getElementById("modalGuests");
+    const modalRoom = document.getElementById("modalRoom");
+    const bookingModalEl = document.getElementById("bookingModal");
+
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const checkin = checkinInput.value;
+      const checkout = checkoutInput.value;
+      const guests = document.getElementById("guests").value;
+      const roomType = document.getElementById("roomType").value;
+
+      if (!checkin || !checkout || !guests || !roomType) {
+        alert("Please complete all booking details.");
+        return;
+      }
+
+      modalDates.textContent = `${formatDate(checkin)} — ${formatDate(checkout)}`;
+      modalGuests.textContent = `${guests} guest${guests > 1 ? "s" : ""}`;
+      modalRoom.textContent = roomType;
+
+      const modal = new bootstrap.Modal(bookingModalEl);
+      modal.show();
+    });
+  </script>
+
+  <script>
+    // ---------- ROOMS FILTER LOGIC ----------
+    const roomListEl = document.getElementById("roomList");
+    const roomCards = Array.from(document.querySelectorAll(".room-card"));
+    const roomsCountEl = document.getElementById("roomsCount");
+
+    const priceRange = document.getElementById("priceRange");
+    const priceMaxLabel = document.getElementById("priceMaxLabel");
+
+    const viewRoomsRadio = document.getElementById("viewRooms");
+    const viewRatesRadio = document.getElementById("viewRates");
+
+    function updatePriceLabel() {
+      priceMaxLabel.textContent = `Up to SGD ${Number(priceRange.value).toLocaleString()}`;
+    }
+
+    function getCheckedValues(selector) {
+      return Array.from(document.querySelectorAll(selector + ":checked")).map(
+        (el) => el.value
+      );
+    }
+
+    function cardMatchesFilters(card, bedFilters, rateFilters, categoryFilters, typeFilters, maxPrice) {
+      const price = parseInt(card.dataset.price, 10);
+      if (price > maxPrice) return false;
+
+      const hasClass = (prefix, filters) =>
+        filters.length === 0 || filters.some((f) => card.classList.contains(prefix + f));
+
+      const bedOk = hasClass("bed-", bedFilters);
+      const rateOk = hasClass("rate-", rateFilters);
+      const categoryOk = hasClass("", categoryFilters);
+      const typeOk = hasClass("", typeFilters);
+
+      return bedOk && rateOk && categoryOk && typeOk;
+    }
+
+    function applyFiltersAndUpdate() {
+      const bedFilters = getCheckedValues(".filter-bed");
+      const rateFilters = getCheckedValues(".filter-rate");
+      const categoryFilters = getCheckedValues(".filter-category");
+      const typeFilters = getCheckedValues(".filter-type");
+      const maxPrice = parseInt(priceRange.value, 10);
+
+      let visibleCount = 0;
+
+      roomCards.forEach((card) => {
+        const show = cardMatchesFilters(
+          card,
+          bedFilters,
+          rateFilters,
+          categoryFilters,
+          typeFilters,
+          maxPrice
+        );
+        card.style.display = show ? "" : "none";
+        if (show) visibleCount++;
+      });
+
+      roomsCountEl.textContent = `${visibleCount} room${visibleCount !== 1 ? "s" : ""} available`;
+    }
+
+    function applySort() {
+      const sortValue = document.querySelector('input[name="sortPrice"]:checked').value;
+
+      if (sortValue === "default") {
+        roomCards.forEach((card) => roomListEl.appendChild(card));
+        return;
+      }
+
+      const sorted = [...roomCards].sort((a, b) => {
+        const pa = parseInt(a.dataset.price, 10);
+        const pb = parseInt(b.dataset.price, 10);
+        return sortValue === "lowest" ? pa - pb : pb - pa;
+      });
+
+      sorted.forEach((card) => roomListEl.appendChild(card));
+    }
+
+    function updateViewMode() {
+      if (viewRatesRadio.checked) {
+        roomListEl.classList.add("rates-view");
+      } else {
+        roomListEl.classList.remove("rates-view");
+      }
+    }
+
+    priceRange.addEventListener("input", () => {
+      updatePriceLabel();
+      applyFiltersAndUpdate();
+    });
+
+    document.querySelectorAll(".filter-bed, .filter-rate, .filter-category, .filter-type")
+      .forEach((el) => el.addEventListener("change", applyFiltersAndUpdate));
+
+    document.querySelectorAll('input[name="sortPrice"]').forEach((el) =>
+      el.addEventListener("change", () => {
+        applySort();
+        applyFiltersAndUpdate();
+      })
+    );
+
+    viewRoomsRadio.addEventListener("change", updateViewMode);
+    viewRatesRadio.addEventListener("change", updateViewMode);
+
+    document.querySelectorAll(".filters-clear").forEach((el) => {
+      el.addEventListener("click", () => {
+        const group = el.dataset.clear;
+        let selector = "";
+        if (group === "bed") selector = ".filter-bed";
+        if (group === "rate") selector = ".filter-rate";
+        if (group === "category") selector = ".filter-category";
+        if (group === "type") selector = ".filter-type";
+        if (!selector) return;
+        document.querySelectorAll(selector).forEach((cb) => (cb.checked = false));
+        applyFiltersAndUpdate();
+      });
+    });
+
+    // initial state
+    updatePriceLabel();
+    applySort();
+    applyFiltersAndUpdate();
+    updateViewMode();
+  </script>
+</body>
+</html>

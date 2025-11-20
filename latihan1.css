@@ -1,0 +1,536 @@
+:root {
+  --lux-gold: #d4af37;
+  --lux-gold-soft: #f7e5b5;
+  --lux-dark: #050814;
+  --lux-overlay: rgba(8, 9, 18, 0.9);
+  --lux-muted: #b0a89a;               /* warm tone */
+  --lux-border: rgba(244, 220, 165, 0.26);
+  --radius-xl: 28px;
+  --shadow-soft: 0 32px 90px rgba(0, 0, 0, 0.9);
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #020617;
+  color: #f9fafb;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent);
+  backdrop-filter: blur(18px);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.navbar-brand span {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  color: var(--lux-muted);
+}
+
+.nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--lux-muted) !important;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--lux-gold);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #f9fafb;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.18), var(--lux-overlay)),
+    url("homepage-masthead-1920x823-1.jpg.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 0, rgba(212, 175, 55, 0.45), transparent 55%),
+    radial-gradient(circle at 96% 100%, rgba(16, 12, 24, 0.96), transparent 45%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 4.6rem;
+  padding-bottom: 2.4rem;
+}
+
+/* teks kiri hero */
+.hero-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--lux-gold-soft);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.2rem, 5vw, 4.2rem);
+  line-height: 1.03;
+  margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 1rem;
+  color: var(--lux-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  max-width: 580px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #f3f4f6;
+  margin-bottom: 2.1rem;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.chip {
+  padding: 0.5rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 220, 165, 0.45);
+  background: rgba(18, 16, 27, 0.94);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+}
+
+.chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--lux-gold);
+}
+
+/* ========== BOOKING CARD ========== */
+.booking-card {
+  background:
+    radial-gradient(circle at 10% 0, rgba(244, 220, 165, 0.22), transparent 65%),
+    linear-gradient(145deg, rgba(34, 25, 20, 0.98), rgba(8, 12, 29, 0.98));
+  border-radius: var(--radius-xl);
+  padding: 2.6rem 2.6rem 2.3rem;
+  border: 1px solid var(--lux-border);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(24px);
+}
+
+.booking-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 1.02rem;
+  color: var(--lux-gold-soft);
+}
+
+.booking-subheading {
+  font-size: 0.86rem;
+  color: var(--lux-muted);
+  max-width: 280px;
+}
+
+.badge-collection {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid rgba(244, 220, 165, 0.6);
+  background: rgba(10, 11, 18, 0.95);
+  color: var(--lux-muted);
+}
+
+.form-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  color: var(--lux-muted);
+}
+
+.form-control,
+.form-select {
+  font-size: 0.98rem;
+  border-radius: 1.05rem;
+  border-color: rgba(209, 213, 219, 0.6);
+  background-color: rgba(10, 12, 22, 0.96);
+  color: #f9fafb;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--lux-gold);
+  box-shadow: 0 0 0 0.1rem rgba(212, 175, 55, 0.7);
+  background-color: rgba(6, 9, 20, 1);
+  color: #f9fafb;
+}
+
+.btn-luxe {
+  border-radius: 999px;
+  border: none;
+  width: 100%;
+  padding: 1.05rem 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f6e1ad, #d1aa32);
+  color: #111827;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.96);
+}
+
+.btn-luxe:hover {
+  filter: brightness(1.04);
+}
+
+.small-note {
+  font-size: 0.72rem;
+  color: var(--lux-muted);
+}
+
+.small-note strong {
+  color: var(--lux-gold-soft);
+}
+
+/* SECTIONS */
+section {
+  padding-top: 3.3rem;
+  padding-bottom: 3.3rem;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--lux-muted);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-muted-soft {
+  color: var(--lux-muted);
+}
+
+.card-luxe {
+  background: radial-gradient(circle at top left, rgba(244, 220, 165, 0.12), transparent 55%),
+              #020617;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(55, 65, 81, 0.95);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-luxe img {
+  object-fit: cover;
+  height: 210px;
+}
+
+.card-luxe-body {
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.badge-room {
+  border-radius: 999px;
+  border: 1px solid rgba(244, 220, 165, 0.5);
+  padding: 0.28rem 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.room-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.18rem;
+}
+
+.divider {
+  border-top: 1px solid rgba(55, 65, 81, 0.9);
+  margin: 1.6rem 0 1.2rem;
+}
+
+.icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 220, 165, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--lux-gold-soft);
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(55, 65, 81, 0.85);
+  padding: 1.4rem 0;
+  font-size: 0.78rem;
+  color: var(--lux-muted);
+}
+
+/* MODAL */
+.modal-content {
+  background: radial-gradient(circle at top, #0b1020, #020617);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.75);
+  color: #e5e7eb;
+  box-shadow: var(--shadow-soft);
+}
+
+.modal-header {
+  border-bottom-color: rgba(31, 41, 55, 0.9);
+}
+
+.modal-title {
+  font-family: "Playfair Display", serif;
+}
+
+.modal-badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.65);
+  color: var(--lux-muted);
+}
+
+.list-group-luxe .list-group-item {
+  background-color: transparent;
+  border-color: rgba(31, 41, 55, 0.9);
+  font-size: 0.84rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.64rem;
+  color: var(--lux-muted);
+}
+
+.list-value {
+  font-weight: 500;
+}
+
+.btn-outline-light-luxe {
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.58rem 1.5rem;
+  border-color: rgba(148, 163, 184, 0.75);
+  color: #f9fafb;
+}
+
+.btn-outline-light-luxe:hover {
+  background-color: rgba(148, 163, 184, 0.19);
+}
+
+@media (max-width: 991px) {
+  .hero > .container {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ========== ROOMS & FILTERS SECTION ========== */
+.rooms-section {
+  background-color: #050815;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.filters-card {
+  background: #f9f4ea;
+  border-radius: 20px;
+  padding: 1.5rem 1.7rem;
+  border: 1px solid #e0d3b6;
+  color: #1f2933;
+  font-size: 0.88rem;
+}
+
+.filters-title {
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.8rem;
+}
+
+.filters-group-label {
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.filters-divider {
+  border: none;
+  border-top: 1px solid #e0d3b6;
+  margin: 1.1rem 0;
+}
+
+.filters-clear {
+  font-size: 0.78rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.filters-column-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.filters-subgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.5rem;
+}
+
+.filters-note {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.price-labels {
+  font-size: 0.78rem;
+}
+
+.price-labels span {
+  color: #374151;
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.room-card {
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: linear-gradient(120deg, rgba(15, 23, 42, 0.96), rgba(24, 19, 18, 0.96));
+  padding: 1.2rem 1.4rem;
+}
+
+.room-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.room-card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+}
+
+.room-card-meta {
+  color: var(--lux-muted);
+}
+
+.room-card-desc {
+  color: var(--lux-muted);
+}
+
+.room-price-label {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.room-price {
+  font-size: 1rem;
+}
+
+.room-tag {
+  font-size: 0.7rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 220, 165, 0.5);
+}
+
+.room-list.rates-view .room-card {
+  padding: 0.9rem 1.1rem;
+}
+
+.room-list.rates-view .room-card-desc {
+  display: none;
+}
+
+.room-list.rates-view .room-card-meta {
+  font-size: 0.78rem;
+}
+
+.room-list.rates-view .room-price {
+  font-size: 0.95rem;
+}
+
+.filters-card .form-check-label {
+  font-size: 0.86rem;
+}
+
+.filters-card .form-check-input {
+  border-radius: 999px;
+}
+
+.room-card .btn-outline-light-luxe {
+  padding: 0.4rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+}
